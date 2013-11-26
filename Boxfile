@@ -31,7 +31,7 @@ web1:
   after_deploy:
     - "rm -f app/storage/cache/*"
     - "rm -f app/storage/views/*"
-     - "php artisan cache:clear"
+    - "php artisan cache:clear"
 cache2:
   type: memcached
 db1:
