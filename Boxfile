@@ -23,12 +23,12 @@ web1:
   #  - "php artisan dump-autoload"  
   #  - "php artisan migrate:refresh --seed"
     - "rm -f public/assets/compiled/*"
-    - "php artisan basset:build -p public"
-    - "php artisan basset:build -p admin"
   after_deploy:
   #  - "php artisan cache:clear"
     - "rm -f app/storage/cache/*"
     - "rm -f app/storage/views/*"
+    - "php artisan basset:build -p public"
+    - "php artisan basset:build -p admin"    
 cache2:
   type: memcached
 db1:
