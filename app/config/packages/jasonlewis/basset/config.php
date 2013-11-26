@@ -114,7 +114,7 @@ return array(
     |
     */
 
-    'production' => array('production', 'prod'),
+    'production' => array('production', 'prod', 'bicolit.gopagoda.com'),
 
     /*
     |--------------------------------------------------------------------------
