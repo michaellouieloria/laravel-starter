@@ -2,7 +2,7 @@ global:
   env:
     - LARAVEL_ENV: production
 web1:
-  document_root: public
+  document_root: public/
   php_version: 5.4.14
   name: bicolit
   shared_writable_dirs:
@@ -11,9 +11,6 @@ web1:
     - /app/storage/meta
     - /app/storage/sessions
     - /app/storage/views
-    - /public/assets/compiled
-    - /vendor
-    - /bootstrap
   php_extensions:
     - mbstring
     - zip
@@ -29,7 +26,7 @@ web1:
   #  - "php artisan basset:build -p public"
   #  - "php artisan basset:build -p admin"
   after_deploy:
-    - "php artisan cache:clear"
+  #  - "php artisan cache:clear"
     - "rm -f app/storage/cache/*"
     - "rm -f app/storage/views/*"
 cache2:
