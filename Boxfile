@@ -21,8 +21,8 @@ web1:
     - mcrypt
     - eaccelerator
     - memcached
-  after_build:
-    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install"    
+  #after_build:
+  #  - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install"    
   before_deploy:
   #  - "php artisan dump-autoload"  
     - "php artisan migrate:refresh --seed"

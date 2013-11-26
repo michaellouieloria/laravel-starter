@@ -1,17 +1,18 @@
 # Laravel
 /bootstrap/compiled.php
-/vendor
+
 
 # Configuration
 /app/config/local
 /app/config/staging
-
+/app/config/production
 
 # Basset development collections
-/public/assets/compiled/public
-/public/assets/compiled/admin
+/public/assets/compiled
+/public/assets/compiled
 
 # Composer
+access.log
 composer.phar
 composer.lock
 
