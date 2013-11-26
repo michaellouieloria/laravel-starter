@@ -13,10 +13,8 @@ web1:
     - /app/storage/views
   php_extensions:
     - mbstring
-    - zip
     - pdo_mysql
     - mcrypt
-    - eaccelerator
     - memcached
   after_build:
     - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install --prefer-source"
