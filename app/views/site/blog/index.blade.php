@@ -33,7 +33,7 @@
 				<p></p>
 				<p>
 					<span class="glyphicon glyphicon-user"></span> by <span class="muted">{{{ $post->author->username }}}</span>
-					| <span class="glyphicon glyphicon-calendar"></span> <!--Sept 16th, 2012-->{{{ $post->date() }}}
+					| <span class="glyphicon glyphicon-time"></span> <!--Sept 16th, 2012-->{{{ $post->date() }}}
 					| <span class="glyphicon glyphicon-comment"></span> <a href="{{{ $post->url() }}}#comments">{{$post->comments()->count()}} {{ \Illuminate\Support\Pluralizer::plural('Comment', $post->comments()->count()) }}</a>
 				</p>
 			</div>
