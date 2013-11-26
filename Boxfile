@@ -2,8 +2,8 @@ global:
   env:
     - LARAVEL_ENV: production
 web1:
-  #after_build:
-  #  - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install"
+  after_build:
+    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install"
   name: bicolit
   shared_writable_dirs:
     - /app/storage/cache
