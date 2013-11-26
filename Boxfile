@@ -11,7 +11,7 @@ web1:
     - /app/storage/meta
     - /app/storage/sessions
     - /app/storage/views
-    - /pulic/asset/compiled
+    - /public/asset/compiled
   php_extensions:
     - mbstring
     - pdo_mysql
