@@ -3,7 +3,7 @@ global:
     - LARAVEL_ENV: production
 web1:
   document_root: public/
-  php_version: 5.4.14
+  php_version: 5.3.23
   name: bicolit
   shared_writable_dirs:
     - /app/storage/cache
