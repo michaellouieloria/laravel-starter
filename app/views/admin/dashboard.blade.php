@@ -1,5 +1,7 @@
-@extends('admin.layouts.default')
+@extends('admin.layouts.home')
 
+{{-- Content --}}
+@section('content')
 <div class="jumbotron">
     <div class="container">
         <h1>Administrator Dashboard</h1>
@@ -30,3 +32,4 @@
         </div>
     </div>
 </div>
+@stop

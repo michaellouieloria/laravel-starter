@@ -114,7 +114,8 @@ return array(
     |
     */
 
-    'production' => array('production', 'prod', '1.web1.bicolit.pagodabox.com', 'bicolit.pagodabox.com', 'pagodabox.com'),
+    //'production' => array('production', 'prod', 'lorz'),
+    'production' => true,
 
     /*
     |--------------------------------------------------------------------------

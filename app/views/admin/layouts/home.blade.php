@@ -122,24 +122,15 @@
         </div>
         <!-- ./ navbar -->
 
-		<!-- Container -->
-		<div class="container">
-			<!-- Notifications -->
-			@include('notifications')
-			<!-- ./ notifications -->
-
-			<!-- Content -->
-			@yield('content')
-			<!-- ./ content -->
-		</div>
-		<!-- ./ container -->        
+        <!-- Content -->
+        @yield('content')
+        <!-- ./ content -->
 
         <!-- Footer -->
         <footer class="clearfix">
             @yield('footer')
         </footer>
         <!-- ./ Footer -->
-
 
         <!-- Javascripts -->
         {{ Basset::show('admin.js') }}
