@@ -2,7 +2,6 @@
 
 return array(
     'profile' => false,
-    'debug' => false,
     'default' => 'production',
     'connections' => array(
         'production' => array(
