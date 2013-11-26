@@ -44,6 +44,10 @@
         {{ Basset::show('public.css') }}
 
 		<style>
+        body {
+            padding: 60px 0;
+        }
+        
 		@section('styles')
 		@show
 		</style>        

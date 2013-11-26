@@ -32,7 +32,7 @@ return array(
         {
             $collection->directory('assets/css', function($collection)
             {
-                $collection->add('less/master.less')->apply('Less');
+                $collection->add('bootstrap.css');
             })->apply('UriRewriteFilter')->apply('CssMin');
 
             $collection->directory('assets/js', function($collection)
@@ -40,7 +40,7 @@ return array(
                 $collection->javascript('http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 //$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
-                $collection->add('../../../vendor/twbs/bootstrap/js/bootstrap.min.js');
+                $collection->add('bootstrap.min.js');
             })->apply('JsMin');
         },
 
@@ -48,7 +48,7 @@ return array(
         {
             $collection->directory('assets/css', function($collection)
             {
-                $collection->add('less/master.less')->apply('Less');
+                $collection->add('bootstrap.css');
                 $collection->add('datatables-bootstrap.css');
                 $collection->add('colorbox.css');
             })->apply('UriRewriteFilter')->apply('CssMin');
@@ -56,21 +56,7 @@ return array(
             $collection->directory('assets/js', function($collection)
             {
                 $collection->javascript('http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js');
-                //$collection->add('bootstrap/bootstrap.js');
-                //$collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
-                $collection->add('../../../vendor/twbs/bootstrap/js/bootstrap.min.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-affix.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-alert.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-button.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-carousel.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-collapse.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-dropdown.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-modal.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-tooltip.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-popover.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-scrollspy.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-tab.js');
-                //$collection->add('../../../vendor/twbs/bootstrap/js/bootstrap-transition.js');   
+                $collection->add('bootstrap.min.js');  
                 $collection->javascript('http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js');
                 $collection->javascript('http://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.2/ckeditor.js');
                 $collection->add('datatables-bootstrap.js');
