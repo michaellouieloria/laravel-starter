@@ -26,9 +26,9 @@ $app = new Illuminate\Foundation\Application;
 
 $env = $app->detectEnvironment(array(
 
-    'local' => array('local'), // Change this to your local machine hostname.
-    'staging' => array('your-staging-machine-name'),
-    'production' => array('your-production-machine-name'),
+    'local' => array('laravel.localhost'), // Change this to your local machine hostname.
+    'staging' => array('bicolit.gopagoda.com'),
+    'production' => array('bicolit.gopagoda.com'),
 
 ));
 

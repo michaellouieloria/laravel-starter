@@ -6,10 +6,10 @@ return array(
     'connections' => array(
         'production' => array(
             'driver'   => 'mysql',
-            'host'     => $_SERVER['DB1_HOST'],
-            'database' => $_SERVER['DB1_NAME'],
-            'username' => $_SERVER['DB1_USER'],
-            'password' => $_SERVER['DB1_PASS'],
+            'host'     => 'tunnel.pagodabox.com',
+            'database' => 'bicolit',
+            'username' => 'modesta',
+            'password' => 'ZgItHe57',
             'charset'  => 'utf8',
             'prefix'   => '',
         ),
