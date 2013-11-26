@@ -20,7 +20,6 @@ web1:
     - eaccelerator
     - memcached
   before_deploy:
-    - "php artisan migrate:refresh"
     - "php artisan migrate:refresh --seed"
     - "php artisan basset:build -p public"
     - "php artisan basset:build -p admin"
