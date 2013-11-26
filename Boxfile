@@ -30,4 +30,5 @@ web1:
 cache2:
   type: memcached
 db1:
+  name: bicolit
   type: mysql
