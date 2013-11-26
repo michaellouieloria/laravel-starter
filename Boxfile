@@ -3,7 +3,7 @@ global:
     - LARAVEL_ENV: production
 web1:
   document_root: public/
-  php_version: 5.3.23
+  php_version: 5.4.14
   name: bicolit
   shared_writable_dirs:
     - /app/storage/cache
@@ -19,7 +19,7 @@ web1:
     - eaccelerator
     - memcached
   after_build:
-    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install"    
+    - "if [ ! -f composer.phar ]; then curl -s http://getcomposer.org/installer | php; fi; php composer.phar install --prefer-source"
   before_deploy:
   #  - "php artisan dump-autoload"  
   #  - "php artisan migrate:refresh --seed"
@@ -27,7 +27,7 @@ web1:
   #  - "php artisan basset:build -p admin"
   after_deploy:
   #  - "php artisan cache:clear"
-    - "rm -f app/storage/cache/*"
+  #  - "rm -f app/storage/cache/*"
     - "rm -f app/storage/views/*"
 cache2:
   type: memcached
