@@ -22,7 +22,7 @@ web1:
   before_deploy:
   #  - "php artisan dump-autoload"  
   #  - "php artisan migrate:refresh --seed"
-    - "rm -f public/assets/compiled/*"
+    - "rm -rf public/assets/compiled/*"
   after_deploy:
   #  - "php artisan cache:clear"
     - "rm -f app/storage/cache/*"
