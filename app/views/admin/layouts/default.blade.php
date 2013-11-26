@@ -94,7 +94,7 @@
                         <ul class="nav navbar-nav">
                             <li{{ (Request::is('admin') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin') }}}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                             <li{{ (Request::is('admin/blogs*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/blogs') }}}"><span class="glyphicon glyphicon-list-alt"></span> Blog</a></li>
-                            <li{{ (Request::is('admin/pages*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/pages') }}}"><span class="glyphicon glyphicon-bullhorn"></span> Pages</a></li>
+                            <li{{ (Request::is('admin/pages*') ? ' class="active"' : '') }}><a href="{{{ URL::to('admin/pages') }}}"><span class="glyphicon glyphicon-list"></span> Pages</a></li>
                             <li class="dropdown{{ (Request::is('admin/users*|admin/roles*') ? ' active' : '') }}">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="{{{ URL::to('admin/users') }}}">
                                     <span class="glyphicon glyphicon-user"></span> Users <span class="caret"></span>
@@ -113,7 +113,7 @@
                                         <span class="glyphicon glyphicon-user"></span> {{{ Auth::user()->username }}}	<span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{{ URL::to('user/settings') }}}"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li>
+                                        <li><a href="{{{ URL::to('user/settings') }}}"><span class="glyphicon glyphicon-file"></span> Settings</a></li>
                                         <li class="divider"></li>
                                         <li><a href="{{{ URL::to('user/logout') }}}"><span class="glyphicon glyphicon-share"></span> Logout</a></li>
                                     </ul>

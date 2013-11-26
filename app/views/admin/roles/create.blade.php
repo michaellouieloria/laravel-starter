@@ -50,7 +50,7 @@
 		<!-- Form Actions -->
 		<div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-				<element class="btn-cancel close_popup">Cancel</element>
+				<button class="btn btn-default btn-small btn-inverse close_popup">Cancel</button>
 				<button type="reset" class="btn btn-default">Reset</button>
 				<button type="submit" class="btn btn-success">Create Role</button>
             </div>
