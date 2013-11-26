@@ -25,5 +25,3 @@
 @section('content')
 {{ $page->content }}
 @stop
-
-<?php echo gethostname(); ?>

@@ -28,7 +28,7 @@ $env = $app->detectEnvironment(array(
 
     'local' => array('lorz'), // Change this to your local machine hostname.
     'staging' => array('bicolit.gopagoda.com'),
-    'production' => array('bicolit.gopagoda.com'),
+    'production' => array('1.web1.bicolit.pagodabox.com'),
 
 ));
 
