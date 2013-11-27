@@ -1,6 +1,6 @@
 # Laravel
 /bootstrap/compiled.php
-
+/vendor
 
 # Configuration
 /app/config/local
@@ -13,13 +13,14 @@
 
 
 # Composer
-*.log
 composer.phar
 composer.lock
 
 # OS
 .DS_Store
 .idea/
+*.log
+Boxfile
 
 # Packages
 _ide_helpers.php
