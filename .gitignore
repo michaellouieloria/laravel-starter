@@ -5,14 +5,15 @@
 # Configuration
 /app/config/local
 /app/config/staging
+/app/config/production
 
 
 # Basset development collections
 /public/assets/compiled
-/public/assets/compiled
+
 
 # Composer
-access.log
+*.log
 composer.phar
 composer.lock
 
