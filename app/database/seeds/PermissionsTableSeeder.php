@@ -4,88 +4,53 @@ class PermissionsTableSeeder extends Seeder {
 
     public function run()
     {
-        DB::table('permissions')->delete();
+        $data = [
+            [
+                'name' => 'manage_blogs',
+                'display_name' => 'manage blogs'
+            ],
+            [
+                'name' => 'manage_posts',
+                'display_name' => 'manage posts'
+            ],
+            [
+                'name' => 'manage_comments',
+                'display_name' => 'manage comments'
+            ],
+            [
+                'name' => 'manage_users',
+                'display_name' => 'manage users'
+            ],
+            [
+                'name' => 'manage_roles',
+                'display_name' => 'manage roles'
+            ],
+            [
+                'name' => 'manage_pages',
+                'display_name' => 'manage pages'
+            ],
+            [
+                'name' => 'manage_pages',
+                'display_name' => 'manage pages'
+            ],
+        ];
 
+        $role = Role::where('name', 'admin')->first();
 
-        $permissions = array(
-            array(
-                'name'      => 'manage_blogs',
-                'display_name'      => 'manage blogs'
-            ),
-            array(
-                'name'      => 'manage_posts',
-                'display_name'      => 'manage posts'
-            ),
-            array(
-                'name'      => 'manage_comments',
-                'display_name'      => 'manage comments'
-            ),
-            array(
-                'name'      => 'manage_users',
-                'display_name'      => 'manage users'
-            ),
-            array(
-                'name'      => 'manage_roles',
-                'display_name'      => 'manage roles'
-            ),
-            array(
-                'name'      => 'manage_pages',
-                'display_name'      => 'manage pages'
-            ),
-            array(
-                'name'      => 'manage_events',
-                'display_name'      => 'manage events'
-            ),            
-            array(
-                'name'      => 'post_comment',
-                'display_name'      => 'post comment'
-            ),            
-        );
+        foreach ($data as $datum)
+        {
+            $count = Permission::where('name', $datum['name'])->count();
+            if (!$count)
+            {
+                $permission = Permission::create($datum);
 
-        DB::table('permissions')->insert( $permissions );
-
-        DB::table('permission_role')->delete();
-
-        $permissions = array(
-            array(
-                'role_id'      => 1,
-                'permission_id' => 1
-            ),
-            array(
-                'role_id'      => 1,
-                'permission_id' => 2
-            ),
-            array(
-                'role_id'      => 1,
-                'permission_id' => 3
-            ),
-            array(
-                'role_id'      => 1,
-                'permission_id' => 4
-            ),
-            array(
-                'role_id'      => 1,
-                'permission_id' => 5
-            ),
-            array(
-                'role_id'      => 1,
-                'permission_id' => 6
-            ),
-            array(
-                'role_id'      => 1,
-                'permission_id' => 7
-            ),
-            array(
-                'role_id'      => 1,
-                'permission_id' => 8
-            ),
-            array(
-                'role_id'      => 2,
-                'permission_id' => 8
-            ),
-        );
-
-        DB::table('permission_role')->insert( $permissions );
-    }
+                $count = DB::table('permission_role')->where('role_id', $role->id)->where('permission_id', $permission->id)->count();
+                if (!$count)
+                {
+                    DB::table('permission_role')->insert(array('role_id' => $role->id, 'permission_id' => $permission->id));
+                }
+            }
+        }
+     }
 
 }

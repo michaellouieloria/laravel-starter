@@ -4,6 +4,8 @@ use Zizaco\Entrust\EntrustPermission;
 
 class Permission extends EntrustPermission
 {
+    public $timestamps = false;
+
     public function preparePermissionsForDisplay($permissions)
     {
         // Get all the available permissions

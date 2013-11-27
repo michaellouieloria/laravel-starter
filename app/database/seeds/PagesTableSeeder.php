@@ -4,10 +4,8 @@ class PagesTableSeeder extends Seeder {
 
     public function run()
     {
-        DB::table('pages')->delete();
-
-        DB::table('pages')->insert( array(
-            array(
+        $data = [
+            [
                 'title'      => 'Home',
                 'slug'       => 'home',
                 'content'    => '    <div class="jumbotron">
@@ -42,8 +40,8 @@ class PagesTableSeeder extends Seeder {
                 'meta_keywords' => 'home',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime,
-            ),
-            array(
+            ],
+            [
                 'title'      => 'About',
                 'slug'       => 'about',
                 'content'    => 'About',
@@ -52,8 +50,8 @@ class PagesTableSeeder extends Seeder {
                 'meta_keywords' => 'about',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime,
-            ),
-            array(
+            ],
+            [
                 'title'      => 'Contact Us',
                 'slug'       => 'contact-us',
                 'content'    => 'Contact Us',
@@ -62,8 +60,17 @@ class PagesTableSeeder extends Seeder {
                 'meta_keywords' => 'contact us',
                 'created_at' => new DateTime,
                 'updated_at' => new DateTime,
-            ))
-        );
-    }
+            ]
+        ];
 
+        foreach ($data as $datum)
+        {
+            $count = Page::where('slug', $datum['slug'])->count();
+            if (!$count)
+            {
+                Page::create($datum);
+            }
+        }
+    }
+    
 }
