@@ -121,6 +121,9 @@ return array(
         'Robbo\Presenter\PresenterServiceProvider', // Presenter
         'Bllim\Datatables\DatatablesServiceProvider', // Datatables
         'Greggilbert\Recaptcha\RecaptchaServiceProvider', //Recaptcha
+        'Roumen\Feed\FeedServiceProvider', //Feed
+        'Roumen\Sitemap\SitemapServiceProvider', //Sitemap
+
         /* Uncomment for use in development */
 //        'Way\Generators\GeneratorsServiceProvider', // Generators
 //        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider', // IDE Helpers
@@ -199,6 +202,7 @@ return array(
         'String'          => 'Andrew13\Helpers\String', // String
         'Carbon'          => 'Carbon\Carbon', // Carbon
         'Datatables'      => 'Bllim\Datatables\Datatables', // DataTables
+        'Feed'            => 'Roumen\Feed\Facades\Feed', //Feed
 
     ),
 

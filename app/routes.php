@@ -118,10 +118,13 @@ Route::get('blog', array('uses' => 'BlogController@getIndex'));
 Route::get('about', array('uses' => 'AboutController@getIndex'));
 Route::get('contact-us', array('before' => 'detectLang','uses' => 'ContactController@getIndex'));
 Route::post('contact-us', array('uses' => 'ContactController@postIndex'));
+Route::get('feed', array('uses' => 'FeedController@getIndex'));
+Route::get('sitemap', array('uses' => 'SitemapController@getIndex'));
 
 # Posts - Second to last set, match slug
 Route::get('{postSlug}', 'BlogController@getView');
 Route::post('{postSlug}', 'BlogController@postView');
+
 
 # Index Page - Last route, no matches
 Route::get('/', array('before' => 'detectLang','uses' => 'HomeController@getIndex'));

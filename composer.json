@@ -17,7 +17,9 @@
 		"robclancy/presenter": "1.2.*",
         "j20/php-uuid": "dev-master",
         "bllim/datatables": "*",
-        "greggilbert/recaptcha": "dev-master"
+        "greggilbert/recaptcha": "dev-master",
+        "roumen/feed": "dev-master",
+        "roumen/sitemap": "dev-master"
 	},
 	"require-dev": {
         "way/generators": "dev-master",

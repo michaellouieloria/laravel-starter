@@ -39,6 +39,9 @@
 		<link rel="apple-touch-icon-precomposed" href="{{{ asset('assets/ico/apple-touch-icon-57-precomposed.png') }}}">
 		<link rel="shortcut icon" href="{{{ asset('assets/ico/favicon.png') }}}">
         
+        <!-- Atom -->
+        <link href="{{{ URL::to('feed') }}}" type="application/atom+xml" rel="alternate" title="BicolIT Feed">
+
 		<!-- CSS
 		================================================== -->
         {{ Basset::show('public.css') }}
