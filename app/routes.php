@@ -114,9 +114,10 @@ Route::post('user/login', 'UserController@postLogin');
 Route::controller('user', 'UserController');
 
 //:: Application Routes ::
-Route::get('blog', array('before' => 'detectLang','uses' => 'BlogController@getIndex'));
-Route::get('about', array('before' => 'detectLang','uses' => 'AboutController@getIndex'));
+Route::get('blog', array('uses' => 'BlogController@getIndex'));
+Route::get('about', array('uses' => 'AboutController@getIndex'));
 Route::get('contact-us', array('before' => 'detectLang','uses' => 'ContactController@getIndex'));
+Route::post('contact-us', array('uses' => 'ContactController@postIndex'));
 
 # Posts - Second to last set, match slug
 Route::get('{postSlug}', 'BlogController@getView');

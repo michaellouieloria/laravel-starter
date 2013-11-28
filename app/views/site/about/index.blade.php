@@ -37,7 +37,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<p>
-					{{ String::tidy($page->content, 200) }}
+					{{ String::tidy($page->content) }}
 				</p>
 			</div>
 		</div>
